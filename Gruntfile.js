@@ -12,11 +12,12 @@ module.exports = function (grunt) {
         helpers: ['src/templates/helpers/helper-*.js'],
         layoutdir: 'src/templates/layouts',
         layout: 'default.hbs',
-        data: ['src/data/*.json']
+        data: 'src/data/*.json',
       },
-      pages: {
+      files: {
         src: 'src/templates/*.hbs',
-        dest: 'dist/'
+        dest: 'dist/',
+        data: 'src/data/*.json',
       }
     }
   });
