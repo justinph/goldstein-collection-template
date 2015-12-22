@@ -14,7 +14,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     clean: {
-      example: ['dist/*']
+      main: ['dist/*']
     },
 
     less: {
@@ -23,7 +23,10 @@ module.exports = function (grunt) {
             sourceMap: true,
             relativeUrls: false,
             compress: false,
-            paths: ['src/assets/css']
+            paths: [
+              'src/assets/css',
+              'node_modules/bootstrap/less'
+              ]
         },
         files: {
           'dist/assets/css/main.css': 'src/less/main.less'
@@ -38,6 +41,14 @@ module.exports = function (grunt) {
         dest: 'dist/assets',
         expand: true
       },
+      jquery: {
+        src: 'node_modules/jquery/dist/jquery.min.js',
+        dest: 'dist/assets/js/jquery.min.js'
+      },
+      bootstrap_js: {
+        src: 'node_modules/bootstrap/dist/js/bootstrap.min.js',
+        dest: 'dist/assets/js/bootstrap.min.js'
+      }
     },
 
     // Build HTML from templates and data
