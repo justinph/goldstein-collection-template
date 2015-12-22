@@ -48,6 +48,12 @@ module.exports = function (grunt) {
       bootstrap_js: {
         src: 'node_modules/bootstrap/dist/js/bootstrap.min.js',
         dest: 'dist/assets/js/bootstrap.min.js'
+      },
+      bootstrap_fonts: {
+        cwd: 'node_modules/bootstrap/dist/fonts',
+        src: '*',
+        dest: 'dist/assets/fonts',
+        expand: true
       }
     },
 
