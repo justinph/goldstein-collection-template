@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>University of Minnesota</title>
-        <!--    None of this mobile stuff will work if you don't use a viewport meta tag -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{title}} {{#if title}} | {{/if}}{{site.title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="{{assets}}/css/main.css" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -64,24 +63,3 @@
         <!-- END UofM FOOTER -->
     </body>
 </html>
-
-
-{{!--
-
-
-<!doctype html>
-<html lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{title}} {{#if title}} | {{/if}}{{site.title}}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-    begin the body
-    {{>body}}
-
-    </body>
-</html>
- --}}
