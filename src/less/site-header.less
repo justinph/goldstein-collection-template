@@ -1,12 +1,78 @@
 // site-header
 
 .site-header {
+    .clearfix();
+    padding: 1rem 0 0.5rem;
+
+    h2{
+        margin: 0 0 0.7rem;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
     .site-title {
         color: @brand-primary;
         font-weight: bold;
     }
 
-    .site-unit {}
+    .site-unit {
+        .text-hide();
+        width: 100%;
+        max-width: 320px;
+        height: 16px;
+        background-image: url(../img/goldstein.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 
-    .site-metaunit {}
+    .site-metaunit {
+        display: none;
+    }
 }
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+
+    .site-header{
+        padding: 1.75rem 0 0.5rem;
+
+        h2{
+            margin-top: 0rem;
+            display: inline-block;
+            float: left;
+            font-size: 22px;
+        }
+
+        .site-title {
+
+            &:after {
+                margin: 0.5em 0.5em;
+                content: " ";
+                border-left: 2px solid @gray;
+            }
+        }
+
+        .site-unit {
+            width: 100%;
+            max-width: 420px;
+            height: 42px;
+            margin-top: 0.5rem;
+        }
+
+
+        .site-metaunit {
+            .text-hide();
+        }
+
+    }
+
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {  }
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { }
