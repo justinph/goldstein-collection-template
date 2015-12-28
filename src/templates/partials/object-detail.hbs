@@ -1,12 +1,42 @@
 
-
 <h1>{{object-detail.title}}</h1>
 
+<h2 class="sr-only">Object Images</h2>
+
+<a href="{{object-detail.images.0.full-url}}"><img src="{{object-detail.images.0.med-url}}" alt="" class="img-responsive"/></a>
 
 
+<ul>
+{{#each object-detail.images}}
+    <a href="{{full-url}}" data-med-url="{{med-url}}"><img src="{{thumb-url}}" alt="{{title}}" /></a>
+{{/each}}
+</ul>
+
+<h2 class="sr-only">Object Information</h2>
 <dl>
 {{#each object-detail.information}}
-  <dt>{{@key}}</dt>
+  <dt><h3>{{@key}}</h3></dt>
   <dd>{{this}}</dd>
 {{/each}}
 </dl>
+
+
+<h2>Related topics</h2>
+<ul>
+{{#each object-detail.related-topics}}
+    <li><a href="{{url}}">{{title}}</a></li>
+{{/each}}
+</ul>
+
+
+<h2>Related objects</h2>
+<ul>
+{{#each object-detail.related-objects}}
+    <li><a href="{{url}}">
+
+    <h3>{{title}}</h3>
+        {{designer}}
+        {{[date made]}}
+    </a></li>
+{{/each}}
+</ul>
