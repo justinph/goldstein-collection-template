@@ -7,7 +7,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-less');
-
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
 
   // Project configuration.
@@ -73,7 +73,34 @@ module.exports = function (grunt) {
         dest: 'dist/',
         data: 'src/data/*.json',
       }
-    }
+    },
+
+    watch: {
+      less: {
+        files: ['src/less/**/*.less'],
+        tasks: 'less:dev'
+      },
+      js: {
+        files: [
+          'Gruntfile.js',
+        ]//,
+        //tasks: 'jshint'
+      },
+      assemble: {
+        files: ['src/templates/**/*.hbs'],
+        tasks: 'assemble'
+      },
+      livereload: {
+        options: {
+          livereload: true
+        },
+        files: [
+          'dist/*.html',
+          'dist/assets/css/*.css',
+          'dist/assets/js/*.js'
+        ]
+      }
+    },
   });
 
   // Default tasks to be run.

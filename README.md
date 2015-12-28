@@ -13,3 +13,8 @@ This assumes you have git and node/npm installed.
 
 Output will be located in the `dist/` directory.
 
+## Development
+
+1. Make sure that `npm install` has been run
+2. Install the [LiveReload browser extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
+3. Run `grunt watch`
