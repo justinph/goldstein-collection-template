@@ -8,6 +8,13 @@
         margin: 0 0 0.7rem;
         text-transform: uppercase;
         font-size: 20px;
+
+        a{
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
     }
 
     .site-title {
@@ -46,23 +53,24 @@
 
         .site-title {
 
-            &:after {
-                margin: 0.5em 0.5em;
-                content: " ";
-                border-left: 2px solid @gray;
-            }
+
         }
 
         .site-unit {
+
+            &:before {
+                content: " ";
+                border-left: 2px solid @gray;
+                height: 19px;
+                float: left;
+                position: relative;
+                left: -12px;
+            }
+
             width: 100%;
             max-width: 420px;
-            height: 42px;
-            margin-top: 0.5rem;
-        }
-
-
-        .site-metaunit {
-            .text-hide();
+            height: 24px;
+            margin: 4px 0 0 22px;
         }
 
     }
@@ -71,8 +79,57 @@
 
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) {  }
+@media (min-width: @screen-md-min) {
+
+    .site-header{
+        h2{
+            font-size: 22px;
+        }
+        .site-metaunit {
+            .text-hide();
+            display: inline-block;
+            width: 100%;
+            max-width: 320px;
+            height: 17px;
+            background-image: url(../img/cdes.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 4px 0 0 22px;
+
+
+            &:before {
+                content: " ";
+                border-left: 2px solid @gray;
+                height: 19px;
+                float: left;
+                position: relative;
+                left: -12px;
+            }
+
+        }
+
+    }
+
+ }
 
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { }
+@media (min-width: @screen-lg-min) {
+    .site-header{
+        h2{
+            font-size: 26px;
+        }
+        .site-unit {
+            max-width: 465px;
+            &:before{
+                height: 22px
+            }
+        }
+        .site-metaunit{
+            height: 19px;
+            &:before{
+                height: 22px
+            }
+        }
+    }
+}
