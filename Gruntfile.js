@@ -87,7 +87,7 @@ module.exports = function (grunt) {
         //tasks: 'jshint'
       },
       assemble: {
-        files: ['src/templates/**/*.hbs'],
+        files: ['src/templates/**/*.hbs', 'src/data/*.json'],
         tasks: 'assemble'
       },
       livereload: {
