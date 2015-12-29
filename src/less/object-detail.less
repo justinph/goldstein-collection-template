@@ -69,10 +69,13 @@
 
     .related-objects-list {
         li {
+            .clearfix();
             margin-bottom: 1em;
-            h3{
+
+            h3 {
                 margin: 0 0 0.25em;
             }
+
             div {
                 float: left;
                 margin: 0 1em 0 0;
@@ -83,10 +86,20 @@
                     max-width: 70px;
                     height: auto;
                 }
+                &.no-image{
+                    height: 90px;
+                    background-color: @gray-lighter;
+                }
             }
-            .clearfix();
-            small{
+
+            small {
                 color: @text-color;
+            }
+
+            a:hover {
+                small {
+                    color: @link-hover-color;
+                }
             }
         }
 

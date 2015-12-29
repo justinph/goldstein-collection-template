@@ -37,6 +37,7 @@
     </div>
 
     <div class="row">
+        {{#if object-detail.related-topics}}
         <div class="col-md-6 related-topics">
             <h2>Explore related topics</h2>
             <ul class="related-topics-list">
@@ -45,13 +46,19 @@
             {{/each}}
             </ul>
         </div>
+        {{/if}}
 
+        {{#if object-detail.related-objects}}
         <div class="col-md-6 related-objects">
             <h2>Related objects</h2>
             <ul class="related-objects-list">
             {{#each object-detail.related-objects}}
                 <li><a href="{{url}}">
-                <div class=""><img src="{{thumb-url}}" alt="" /></div>
+                {{#if thumb-url}}
+                <div><img src="{{thumb-url}}" alt="" /></div>
+                {{else}}
+                    <div class="no-image"></div>
+                {{/if}}
                 <h3>{{title}}</h3>
                     <small>{{designer}}<br />
                     {{[date made]}}</small>
@@ -59,6 +66,7 @@
             {{/each}}
             </ul>
        </div>
+       {{/if}}
     </div>
 
 </div> <!-- end object-detail -->

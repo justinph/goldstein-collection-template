@@ -90,12 +90,19 @@
             "url": "#"
         },
         {
+            "title": "Screen with no image",
+            "designer": "Eames, Charles",
+            "date made": "1947",
+            "thumb-url": "",
+            "url": "#"
+        },{
             "title": "Screen",
             "designer": "Eames, Charles",
             "date made": "1947",
             "thumb-url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Thumbnails/GMD1996095001z-1-jpg634450309746165071-jpg634450309746165071.jpg",
             "url": "#"
         }
+
 
     ]
 }
