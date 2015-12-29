@@ -5,12 +5,19 @@
     padding: 1.25em 1em;
     margin: 0 -15px;
 
-    .search-button-text{
+    .input-group,
+    &.has-advanced .advanced-search-link {
+        max-width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .search-button-text {
         text-transform: uppercase;
         font-weight: bold;
     }
 
-    .advanced-search-link{
+    .advanced-search-link {
         display: block;
         font-weight: bold;
         text-transform: uppercase;
@@ -22,7 +29,7 @@
 
     }
 
-    &.has-advanced{
+    &.has-advanced {
         padding-bottom: 0.75em;
     }
 
