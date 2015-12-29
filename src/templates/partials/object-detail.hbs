@@ -51,10 +51,10 @@
             <ul class="related-objects-list">
             {{#each object-detail.related-objects}}
                 <li><a href="{{url}}">
-
+                <div class=""><img src="{{thumb-url}}" alt="" /></div>
                 <h3>{{title}}</h3>
-                    {{designer}}
-                    {{[date made]}}
+                    <small>{{designer}}<br />
+                    {{[date made]}}</small>
                 </a></li>
             {{/each}}
             </ul>
