@@ -7,16 +7,13 @@
         </div>
     </div>
 
-
     <div class="row">
 
-     <div class="col-md-6 col-md-push-6">
+        {{#if object-detail.images}}
+        <div class="col-md-6 col-md-push-6">
+            <h2 class="sr-only">Object Images</h2>
 
-
-        <h2 class="sr-only">Object Images</h2>
-
-            <a href="{{object-detail.images.0.full-url}}"><img src="{{object-detail.images.0.med-url}}" alt="" class="img-responsive"/></a>
-
+            <a href="{{object-detail.images.0.full-url}}" id='object-detail-image-link'><img src="{{object-detail.images.0.med-url}}" alt="" class="img-responsive object-detail-image"/></a>
 
             <ul class="object-images-list">
             {{#each object-detail.images}}
@@ -24,7 +21,9 @@
             {{/each}}
             </ul>
         </div>
+        {{/if}}
 
+        {{#if object-detail.information}}
         <div class="col-md-6 col-md-pull-6">
             <h2 class="sr-only">Object Information</h2>
             <dl>
@@ -34,6 +33,7 @@
             {{/each}}
             </dl>
         </div>
+        {{/if}}
     </div>
 
     <div class="row">

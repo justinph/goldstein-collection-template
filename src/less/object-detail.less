@@ -17,6 +17,14 @@
         margin-bottom: 1em;
     }
 
+    .object-detail-image {
+        opacity: 1;
+        transition: opacity .5s ease-in-out;
+        &.loading {
+            opacity: 0.5;
+        }
+    }
+
     .related-objects-list,
     .related-topics-list,
     .object-images-list {

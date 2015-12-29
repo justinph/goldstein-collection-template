@@ -41,6 +41,10 @@ module.exports = function (grunt) {
         dest: 'dist/assets',
         expand: true
       },
+      main_js: {
+        src: 'src/js/main.js',
+        dest: 'dist/assets/js/main.js'
+      },
       jquery: {
         src: 'node_modules/jquery/dist/jquery.min.js',
         dest: 'dist/assets/js/jquery.min.js'
@@ -87,8 +91,12 @@ module.exports = function (grunt) {
         //tasks: 'jshint'
       },
       assemble: {
-        files: ['src/templates/**/*.hbs', 'src/data/*.json'],
+        files: ['src/templates/**/*.hbs', 'src/data/*.json', 'src/js/*.js'],
         tasks: 'assemble'
+      },
+      copy: {
+        files: ['src/js/*.js'],
+        tasks: 'copy'
       },
       livereload: {
         options: {
