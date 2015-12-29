@@ -4,17 +4,18 @@
 @import (less) "2015-tc.css";
 
 
-@import "local-variables";
-@import "local-mixins";
+@import "_local-variables";
+@import "_local-mixins";
 @import "_bootstrap";
 
 
 // Goldstein
 
-// perhaps should go into overrides.less
-.container-fluid {
-    max-width: 1090px;
-}
+@import "_overrides";
 
+//site-wide
 @import "site-header";
 @import "search-panel";
+
+//detail
+@import "object-detail";
