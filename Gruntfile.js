@@ -67,7 +67,7 @@ module.exports = function (grunt) {
         flatten: true,
         assets: 'dist/assets',
         partials: ['src/templates/partials/*.hbs'],
-        helpers: ['src/templates/helpers/helper-*.js'],
+        helpers: ['handlebars-helper-add-commas'], //'src/templates/helpers/helper-*.js'
         layoutdir: 'src/templates/layouts',
         layout: 'default.hbs',
         data: 'src/data/*.json',
