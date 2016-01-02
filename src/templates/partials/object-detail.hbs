@@ -1,0 +1,75 @@
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>{{object-detail.title}}</h1>
+    </div>
+</div>
+
+<div class="row">
+
+    {{#if object-detail.images}}
+    <div class="col-md-6 col-md-push-6">
+        <h2 class="sr-only">Object Images</h2>
+
+        <a href="{{object-detail.images.0.full-url}}" id='object-detail-image-link'><img src="{{object-detail.images.0.med-url}}" alt="" class="img-responsive object-detail-image"/></a>
+
+        <ul class="object-images-list">
+        {{#each object-detail.images}}
+            <li><a href="{{full-url}}" data-med-url="{{med-url}}"><img src="{{thumb-url}}" alt="{{title}}" /></a></li>
+        {{/each}}
+        </ul>
+    </div>
+    {{/if}}
+
+    {{#if object-detail.information}}
+    <div class="col-md-6 col-md-pull-6">
+        <h2 class="sr-only">Object Information</h2>
+        <dl>
+        {{#each object-detail.information}}
+          <dt>{{@key}}</dt>
+          <dd>{{this}}</dd>
+        {{/each}}
+        </dl>
+    </div>
+    {{/if}}
+</div>
+
+<div class="row">
+    {{#if object-detail.related-topics}}
+    <div class="col-md-6 related-topics">
+        <h2>Explore related topics</h2>
+        <ul class="related-topics-list">
+        {{#each object-detail.related-topics}}
+            <li><a href="{{url}}"><span class="label label-default">{{title}}</span></a></li>
+        {{/each}}
+        </ul>
+    </div>
+    {{/if}}
+
+    {{#if object-detail.related-objects}}
+    <div class="col-md-6 related-objects">
+        <h2>Related objects</h2>
+        {{#if object-detail.related-objects.preview-items}}
+        <ul class="related-objects-list">
+        {{#each object-detail.related-objects.preview-items}}
+            <li><a href="{{url}}">
+            {{#if thumb-url}}
+            <div><img src="{{thumb-url}}" alt="" /></div>
+            {{else}}
+                <div class="no-image"></div>
+            {{/if}}
+            <h3>{{title}}</h3>
+                <small>{{designer}}<br />
+                {{[date made]}}</small>
+            </a></li>
+        {{/each}}
+        </ul>
+        {{/if}}
+        {{#if object-detail.related-objects.count}}
+            <a href="#" class="btn btn-info">View all related objects <span class="badge">{{object-detail.related-objects.count}}</span></a>
+        {{/if}}
+   </div>
+   {{/if}}
+</div>
+
