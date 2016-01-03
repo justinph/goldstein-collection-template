@@ -7661,11 +7661,6 @@ h3 {
   }
 }
 /* Large devices (large desktops, 1200px and up) */
-.explore-collection h2 {
-  font-size: 1em;
-  text-transform: uppercase;
-  color: #555555;
-}
 .explore-collection ul {
   padding: 0;
 }
@@ -7687,6 +7682,22 @@ h3 {
 .explore-collection .explore-list.wide li {
   flex-basis: 50%;
 }
+.explore-collection .panel-title {
+  font-weight: bold;
+  color: #555555;
+}
+.explore-collection .panel-title a:hover,
+.explore-collection .panel-title a:focus {
+  text-decoration: none;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .explore-collection {
+    border-bottom: 1px solid #eeeeee;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
 .advanced-search h3 {
   font-size: 1em;
   text-transform: uppercase;
@@ -7718,6 +7729,76 @@ h3 {
   }
 }
 /* Large devices (large desktops, 1200px and up) */
+.home-objects {
+  padding-bottom: 1em;
+  margin-bottom: 0.5em;
+}
+.object-of-week img {
+  max-width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+.object-of-week h3 {
+  margin: 0;
+}
+.object-of-week small {
+  color: #333333;
+}
+.object-of-week a:hover small {
+  color: #8f2424;
+}
+.featured-objects-list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.featured-objects-list li {
+  list-style-type: none;
+  flex-basis: 33%;
+  padding: 5px;
+}
+.featured-objects-list li a {
+  height: 110px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+@media (min-width: 568px) {
+  .featured-objects-list li {
+    flex-basis: 25%;
+  }
+  .featured-objects-list li:nth-of-type(9) {
+    display: none;
+  }
+  .featured-objects-list li a {
+    height: 140px;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .home-objects {
+    border-bottom: 1px solid #eeeeee;
+  }
+  .featured-objects-list li a {
+    height: 160px;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .featured-objects-list li {
+    flex-basis: 33%;
+  }
+  .featured-objects-list li:nth-of-type(9) {
+    display: block;
+  }
+  .featured-objects-list li a {
+    height: 130px;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
 .collection-stats {
   border-top: 1px solid #eeeeee;
   padding: 0.75em 0;
@@ -7727,6 +7808,11 @@ h3 {
 }
 .collection-stats .in-catalog {
   color: #cc3333;
+}
+.home h2 {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #555555;
 }
 /* Small devices (tablets, 768px and up) */
 /* Medium devices (desktops, 992px and up) */
