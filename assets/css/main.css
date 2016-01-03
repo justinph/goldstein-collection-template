@@ -7486,6 +7486,25 @@ h2,
 h3 {
   font-weight: bold;
 }
+#umnhf-uf-ci p,
+#umnhf-uf-ul p,
+#umnhf-f p,
+#umnhf-uf-ci ul li,
+#umnhf-uf-ul ul li,
+#umnhf-f ul li {
+  line-height: 2rem;
+}
+#umnhf-uf-ci a,
+#umnhf-uf-ul a,
+#umnhf-f a {
+  color: #7a0019;
+  text-decoration: underline;
+}
+#umnhf-uf-ci small,
+#umnhf-uf-ul small,
+#umnhf-f small {
+  font-size: 1rem;
+}
 /* Small devices (tablets, 768px and up) */
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -7698,6 +7717,9 @@ h3 {
 }
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
+.advanced-search {
+  padding-bottom: 1em;
+}
 .advanced-search h3 {
   font-size: 1em;
   text-transform: uppercase;
