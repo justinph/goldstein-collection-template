@@ -6,6 +6,8 @@
     var $oDLink = $('#object-detail-image-link');
     var $oDImg = $('#object-detail-image-link img');
 
+    var $home = $('.home');
+
     //object detail page
     if ($object_detail.length > 0){
         //swap images on click/tap
@@ -19,5 +21,12 @@
             }).attr('src', medUrl);
         });
     }
+
+    //home page
+    if ($home.length > 0){
+        $home.find('.nav-tabs').tabCollapse();
+    }
+
+
 
 })();

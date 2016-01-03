@@ -1,9 +1,5 @@
 
  .explore-collection{
-    h2 {
-        .label-headline();
-    }
-
 
     ul {
         padding: 0;
@@ -31,6 +27,25 @@
                 flex-basis: 50%;
             }
         }
+    }
+
+    .panel-title {
+        font-weight: bold;
+        color: @gray;
+        a {
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .panel-default{
+        //border: none;
+    }
+
+    .panel-default > .panel-heading {
+        //background: none;
     }
 
 }

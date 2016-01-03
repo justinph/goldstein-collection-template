@@ -2,6 +2,7 @@
   "name": "goldstein-collections",
   "version": "1.0.0",
   "description": "collections website templates",
+  "repository": "https://github.com/justinph/goldstein-collection-template.git",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
