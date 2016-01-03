@@ -2,6 +2,62 @@
     "collection-stats": {
         "objects-in-catalog": 17911,
         "objects-in-collection": 37123
+    },
+
+    "object-of-week": {
+        "title": "Dresses",
+        "designer": "Amado, Rose",
+        "date made": "1935",
+        "med-url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/MedImages/GMD2009050001_1-jpg634877993331843880.jpg",
+        "thumb-url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/ThumbNails/GMD2009050001_1-jpg634877993331843880-jpg634877993331843880.jpg",
+        "url": "#"
+    },
+
+    "featured-objects": {
+        "archive-url": "#",
+        "items": [{
+            "title": "arm chairs",
+            "url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Detail.aspx?rID=0000.026.245&db=objects&dir=GOLDSTEIN&page=1",
+            "thumb-url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Thumbnails/GMD0000026245-1-jpg634450318467007068-jpg634450318467007068.jpg"
+        }, {
+            "title": "arm chairs",
+            "url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Detail.aspx?rID=0000.001.248&db=objects&dir=GOLDSTEIN&page=1",
+            "thumb-url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Thumbnails/GMD0000000248-6-jpg634182369294505791-jpg634182369294505791.jpg"
+        }, {
+            "title": "chairs",
+            "url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Detail.aspx?rID=1983.022.003&db=objects&dir=GOLDSTEIN&page=1",
+            "thumb-url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Thumbnails/GMD1980004002_1-jpg635139706472600563-jpg635139706472600563.jpg"
+        },
+
+        {
+            "title": "arm chairs",
+            "url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Detail.aspx?rID=0000.026.245&db=objects&dir=GOLDSTEIN&page=1",
+            "thumb-url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Thumbnails/GMD1996097001-7-jpg634182371637786142-jpg634182371637786142.jpg"
+        }, {
+            "title": "arm chairs",
+            "url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Detail.aspx?rID=0000.001.248&db=objects&dir=GOLDSTEIN&page=1",
+            "thumb-url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Thumbnails/GMD1996072001-1-jpg634177241247137118-jpg634177241247137118.jpg"
+        }, {
+            "title": "chairs",
+            "url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Detail.aspx?rID=1983.022.003&db=objects&dir=GOLDSTEIN&page=1",
+            "thumb-url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Thumbnails/GMD1999068009-2-jpg634183421002766904-jpg634183421002766904.jpg"
+        },
+
+        {
+            "title": "arm chairs",
+            "url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Detail.aspx?rID=0000.026.245&db=objects&dir=GOLDSTEIN&page=1",
+            "thumb-url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Thumbnails/GMD1976.015.068_1-jpg635567623615547929-jpg635567623615547929.jpg"
+        }, {
+            "title": "arm chairs",
+            "url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Detail.aspx?rID=0000.001.248&db=objects&dir=GOLDSTEIN&page=1",
+            "thumb-url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Thumbnails/GMD1983007002_1-jpg635139708211633171-jpg635139708211633171.jpg"
+        }, {
+            "title": "chairs",
+            "url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Detail.aspx?rID=1983.022.003&db=objects&dir=GOLDSTEIN&page=1",
+            "thumb-url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Thumbnails/GMD0000.004.067_1-jpg635566604840054530-jpg635566604840054530.jpg"
+        }
+
+        ]
     }
 
 }

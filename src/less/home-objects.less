@@ -1,0 +1,111 @@
+.home-objects {
+    padding-bottom: 1em;
+    margin-bottom: 0.5em;
+}
+
+.object-of-week{
+    img{
+        max-width: 70%;
+        height: auto;
+        margin: 0 auto;
+    }
+    h3{
+        margin: 0;
+    }
+    small {
+        color: @text-color;
+    }
+    a:hover {
+        small{
+            color: @link-hover-color;
+        }
+    }
+} // end object-of-week
+
+.featured-objects {
+
+}
+
+.featured-objects-list {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+    li {
+        list-style-type: none;
+        flex-basis: 33%;
+        padding: 5px;
+        a{
+            height: 110px;
+            display: block;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+    }
+
+}
+// @media (min-width: (@screen-sm-min - 300)) {
+//     .featured-objects-list {
+//         li {
+//             a {
+//                 height: 130px;
+//             }
+//         }
+//     }
+// }
+
+@media (min-width: (@screen-sm-min - 200)) {
+    .featured-objects-list {
+        li {
+            flex-basis: 25%;
+            &:nth-of-type(9){
+                display: none;
+            }
+            a {
+
+                height: 140px;
+            }
+        }
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+    .home-objects{
+        border-bottom: 1px solid @gray-lighter;
+    }
+    .featured-objects-list{
+        li {
+            a{
+                height: 160px;
+            }
+        }
+    }
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+        .featured-objects-list{
+        li {
+            flex-basis: 33%;
+
+            &:nth-of-type(9){
+                display: block;
+            }
+
+            a{
+                height: 130px;
+            }
+        }
+    }
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
+}
+
