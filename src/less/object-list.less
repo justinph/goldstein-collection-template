@@ -1,0 +1,59 @@
+
+.object-list {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+        .clearfix();
+        margin-bottom: 1em;
+
+        h3 {
+            margin: 0 0 0.25em;
+        }
+
+        div {
+            float: left;
+            margin: 0 1em 0 0;
+            width: 25%;
+            img{
+                margin: 0 auto;
+                display: block;
+                max-width: 70px;
+                height: auto;
+            }
+            &.no-image{
+                height: 90px;
+                background-color: @gray-lighter;
+            }
+        }
+
+        small {
+            color: @text-color;
+        }
+
+        a:hover {
+            small {
+                color: @link-hover-color;
+            }
+        }
+    }
+}
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
+}

@@ -1,43 +1,67 @@
 
-<header class="search-results-meta">
+<div class="row">
+    <div class="col-md-12">
+        <header class="search-results-meta">
 
-</header>
-
-<ol>
-{{#each results.objects}}
-    <li><a href="{{url}}">
-    {{#if thumb-url}}
-    <div><img src="{{thumb-url}}" alt="" /></div>
-    {{else}}
-        <div class="no-image"></div>
-    {{/if}}
-    <h3>{{title}}</h3>
-        <small>{{designer}}<br />
-        {{[date made]}}</small>
-    </a></li>
-{{/each}}
-</ol>
-
-<footer class="search-results-footer">
-
-    {{#if results.pagination.pages}}
-    <nav>
-        <ul class="pagination">
-            {{#if results.pagination.previous}}
-                <li {{#if results.pagination.previous.disabled}}class="disabled"{{/if}}><a href="{{results.pagination.previous.url}}" aria-label="Previous"><span
-                    aria-hidden="true">&laquo;</span></a></li>
+        {{#unless results.object-count}}
+            <div class="alert alert-warning" role="alert">No results for <i>{{{results.query}}}</i></div>
+        {{else}}
+            {{#if results.pagination}}
+                Page {{results.current-page}} of
             {{/if}}
 
-            {{#each results.pagination.pages}}
-                <li {{#if current}}class="active"{{/if}}><a href="{{url}}">{{title}} {{#if current}}<span class="sr-only">(current)</span>{{/if}}</a></li>
+            {{results.object-count}} results
+        {{/unless}}
+
+            {{#if results.print-url}}
+
+                <a href="{{results.print-url}}" aria-label="Print" class="print-results"><span class="glyphicon glyphicon-print" aria-hidden="true"></span> <span class="print-label">Print</span></a>
+            {{/if}}
+
+
+        </header>
+
+        {{#if results.object-count}}
+            <ol class="object-list search-results-list">
+            {{#each results.objects}}
+                <li><a href="{{url}}">
+                {{#if thumb-url}}
+                <div><img src="{{thumb-url}}" alt="" /></div>
+                {{else}}
+                    <div class="no-image"></div>
+                {{/if}}
+                <h3>{{title}}</h3>
+                    <small>{{designer}}<br />
+                    {{[date made]}}</small>
+                </a></li>
             {{/each}}
+            </ol>
 
-            {{#if results.pagination.next}}
-                <li {{#if results.pagination.next.disabled}}class="disabled"{{/if}}><a href="{{results.pagination.next.url}}" aria-label="Next"><span
-                    aria-hidden="true">&raquo;</span></a></li>
-            {{/if}}
-        </ul>
-    </nav>
-    {{/if}}
+            <footer class="search-results-footer">
 
-</footer>
+                {{#if results.pagination.pages}}
+                <nav>
+                    <ul class="pagination">
+                        {{#if results.pagination.previous}}
+                            <li {{#if results.pagination.previous.disabled}}class="disabled"{{/if}}><a href="{{results.pagination.previous.url}}" aria-label="Previous"><span
+                                aria-hidden="true">&laquo;</span></a></li>
+                        {{/if}}
+
+                        {{#each results.pagination.pages}}
+                            <li {{#if current}}class="active"{{/if}}><a href="{{url}}">{{title}} {{#if current}}<span class="sr-only">(current)</span>{{/if}}</a></li>
+                        {{/each}}
+
+                        {{#if results.pagination.next}}
+                            <li {{#if results.pagination.next.disabled}}class="disabled"{{/if}}><a href="{{results.pagination.next.url}}" aria-label="Next"><span
+                                aria-hidden="true">&raquo;</span></a></li>
+                        {{/if}}
+                    </ul>
+                </nav>
+                {{/if}}
+
+            </footer>
+
+        {{/if}}
+
+    </div>
+</div>

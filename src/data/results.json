@@ -2,7 +2,6 @@
     "query": "chair",
     "current-page": 2,
     "object-count": 124,
-
     "pagination": {
         "previous": {
             "url": "#1",
@@ -49,6 +48,22 @@
         "designer": "Eames, Charles",
         "date made": "1947",
         "thumb-url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Thumbnails/GMD1996095001z-1-jpg634450309746165071-jpg634450309746165071.jpg",
+        "url": "#"
+    }, {
+        "title": "Chairs",
+        "designer": "Eames, Charles",
+        "date made": "1956",
+        "thumb-url": "http://collection.goldstein.design.umn.edu/proficiowebmodule/Thumbnails/GMD1996097001-7-jpg634182371637786142-jpg634182371637786142.jpg",
+        "url": "#"
+    }, {
+        "title": "Side chairs",
+        "designer": "Eames, Charles",
+        "date made": "1946",
+        "url": "#"
+    }, {
+        "title": "Screen",
+        "designer": "Eames, Charles",
+        "date made": "1947",
         "url": "#"
     }, {
         "title": "Chairs",

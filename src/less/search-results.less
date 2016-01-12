@@ -1,0 +1,73 @@
+.search-results {
+    .print-results {
+        float: right;
+        text-decoration: none;
+
+        .glyphicon{
+            color: @gray;
+        }
+
+        .print-label {
+            display: none;
+        }
+
+        &:hover{
+            .glyphicon {
+                color: @link-hover-color;
+            }
+        }
+    }
+
+}
+
+.search-results-meta{
+    padding: 1em 0;
+}
+
+
+.search-results-list { }
+
+.search-results-footer {
+    nav{
+        text-align: center;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+    .search-results-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            flex-basis: 50%;
+        }
+    }
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+    .search-results {
+        .print-results {
+            .print-label {
+                display: inline;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .search-results-list {
+
+        li {
+            flex-basis: 33.333%;
+        }
+    }
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
+}
