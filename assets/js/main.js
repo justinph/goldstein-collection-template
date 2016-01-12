@@ -27,6 +27,18 @@
         $home.find('.nav-tabs').tabCollapse();
     }
 
+    //advanced search clicking
+    $('#advanced-search-link').click(function (e){
+        var $this = $(this);
+        e.preventDefault();
+        $('.advanced-search-wrap').removeClass('hidden');
+        $this.replaceWith('<h3>' + $this.text() + '</h3>');
+    });
+
+
+    //search results
+
+
 
 
 })();

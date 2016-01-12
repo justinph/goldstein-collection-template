@@ -7646,8 +7646,15 @@ h3 {
   padding: 1.25em 1em;
   margin: 0 -15px;
 }
+.search-panel h3 {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #555555;
+}
 .search-panel .input-group,
-.search-panel.has-advanced .advanced-search-link {
+.search-panel.has-advanced .advanced-search-link,
+.search-panel .advanced-search-wrap,
+.search-panel h3 {
   max-width: 850px;
   margin-left: auto;
   margin-right: auto;
@@ -7679,6 +7686,56 @@ h3 {
     height: 38px;
   }
 }
+/* Large devices (large desktops, 1200px and up) */
+.object-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+.object-list li {
+  margin-bottom: 1em;
+}
+.object-list li:before,
+.object-list li:after {
+  content: " ";
+  display: table;
+}
+.object-list li:after {
+  clear: both;
+}
+.object-list li:before,
+.object-list li:after {
+  content: " ";
+  display: table;
+}
+.object-list li:after {
+  clear: both;
+}
+.object-list li h3 {
+  margin: 0 0 0.25em;
+}
+.object-list li div {
+  float: left;
+  margin: 0 1em 0 0;
+  width: 25%;
+}
+.object-list li div img {
+  margin: 0 auto;
+  display: block;
+  max-width: 70px;
+  height: auto;
+}
+.object-list li div.no-image {
+  height: 90px;
+  background-color: #eeeeee;
+}
+.object-list li small {
+  color: #333333;
+}
+.object-list li a:hover small {
+  color: #8f2424;
+}
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
 .explore-collection ul {
   padding: 0;
@@ -7903,49 +7960,6 @@ h3 {
 .object-detail .related-topics li a:hover span {
   background-color: #cc3333;
 }
-.object-detail .related-objects-list li {
-  margin-bottom: 1em;
-}
-.object-detail .related-objects-list li:before,
-.object-detail .related-objects-list li:after {
-  content: " ";
-  display: table;
-}
-.object-detail .related-objects-list li:after {
-  clear: both;
-}
-.object-detail .related-objects-list li:before,
-.object-detail .related-objects-list li:after {
-  content: " ";
-  display: table;
-}
-.object-detail .related-objects-list li:after {
-  clear: both;
-}
-.object-detail .related-objects-list li h3 {
-  margin: 0 0 0.25em;
-}
-.object-detail .related-objects-list li div {
-  float: left;
-  margin: 0 1em 0 0;
-  width: 20%;
-}
-.object-detail .related-objects-list li div img {
-  margin: 0 auto;
-  display: block;
-  max-width: 70px;
-  height: auto;
-}
-.object-detail .related-objects-list li div.no-image {
-  height: 90px;
-  background-color: #eeeeee;
-}
-.object-detail .related-objects-list li small {
-  color: #333333;
-}
-.object-detail .related-objects-list li a:hover small {
-  color: #8f2424;
-}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .object-detail dt {
@@ -7982,5 +7996,46 @@ h3 {
   }
 }
 /* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+.search-results .print-results {
+  float: right;
+  text-decoration: none;
+}
+.search-results .print-results .glyphicon {
+  color: #555555;
+}
+.search-results .print-results .print-label {
+  display: none;
+}
+.search-results .print-results:hover .glyphicon {
+  color: #8f2424;
+}
+.search-results-meta {
+  padding: 1em 0;
+}
+.search-results-footer nav {
+  text-align: center;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .search-results-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .search-results-list li {
+    flex-basis: 50%;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .search-results .print-results .print-label {
+    display: inline;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .search-results-list li {
+    flex-basis: 33.333%;
+  }
+}
 /* Large devices (large desktops, 1200px and up) */
 /*# sourceMappingURL=dist/assets/css/main.css.map */
