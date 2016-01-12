@@ -1,0 +1,43 @@
+
+<header class="search-results-meta">
+
+</header>
+
+<ol>
+{{#each results.objects}}
+    <li><a href="{{url}}">
+    {{#if thumb-url}}
+    <div><img src="{{thumb-url}}" alt="" /></div>
+    {{else}}
+        <div class="no-image"></div>
+    {{/if}}
+    <h3>{{title}}</h3>
+        <small>{{designer}}<br />
+        {{[date made]}}</small>
+    </a></li>
+{{/each}}
+</ol>
+
+<footer class="search-results-footer">
+
+    {{#if results.pagination.pages}}
+    <nav>
+        <ul class="pagination">
+            {{#if results.pagination.previous}}
+                <li {{#if results.pagination.previous.disabled}}class="disabled"{{/if}}><a href="{{results.pagination.previous.url}}" aria-label="Previous"><span
+                    aria-hidden="true">&laquo;</span></a></li>
+            {{/if}}
+
+            {{#each results.pagination.pages}}
+                <li {{#if current}}class="active"{{/if}}><a href="{{url}}">{{title}} {{#if current}}<span class="sr-only">(current)</span>{{/if}}</a></li>
+            {{/each}}
+
+            {{#if results.pagination.next}}
+                <li {{#if results.pagination.next.disabled}}class="disabled"{{/if}}><a href="{{results.pagination.next.url}}" aria-label="Next"><span
+                    aria-hidden="true">&raquo;</span></a></li>
+            {{/if}}
+        </ul>
+    </nav>
+    {{/if}}
+
+</footer>

@@ -5,8 +5,14 @@
     padding: 1.25em 1em;
     margin: 0 -15px;
 
+    h3{
+        .label-headline();
+    }
+
     .input-group,
-    &.has-advanced .advanced-search-link {
+    &.has-advanced .advanced-search-link,
+    .advanced-search-wrap,
+    h3 {  //this isn't the greatest selector, but it works for our limited use case
         max-width: 850px;
         margin-left: auto;
         margin-right: auto;
@@ -32,7 +38,6 @@
     &.has-advanced {
         padding-bottom: 0.75em;
     }
-
 }
 
 

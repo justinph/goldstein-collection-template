@@ -2,7 +2,7 @@
 
 
     <div class="input-group">
-        <input type="text" id="search-field" class="form-control" placeholder="Search for material, designer, object type..." />
+        <input type="text" id="search-field" class="form-control" placeholder="Search for material, designer, object type..." value="{{results.query}}"/>
         <label for="search-field" class="sr-only">Search the collection</label>
 
         <span class="input-group-btn">
@@ -11,8 +11,11 @@
     </div>
 
     {{#if show_advanced_search}}
-    <a href="#" class="advanced-search-link">Advanced search<span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a>
-    {{/if}}
+    <a href="javascript:void(0)" class="advanced-search-link" id="advanced-search-link">Advanced search<span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a>
 
+        <div class="advanced-search-wrap hidden">
+            {{> advanced-search}}
+        </div>
+    {{/if}}
 
 </div>
