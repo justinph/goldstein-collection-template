@@ -8011,7 +8011,9 @@ h3 {
   color: #8f2424;
 }
 .search-results-meta {
-  padding: 1em 0;
+  padding: 1em 0 0.75em;
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 1.25em;
 }
 .search-results-footer nav {
   text-align: center;
@@ -8038,4 +8040,26 @@ h3 {
   }
 }
 /* Large devices (large desktops, 1200px and up) */
+.exhibition-detail {
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 0.5em;
+}
+.exhibition-detail .exhibition-label {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #555555;
+  margin-top: 1em;
+  font-weight: bold;
+}
+.exhibition-detail h1 {
+  margin: 0 0 0.5em;
+}
+.exhibition-detail p {
+  line-height: 1.6;
+}
+.exhibition-detail .related-links h2 {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #555555;
+}
 /*# sourceMappingURL=dist/assets/css/main.css.map */

@@ -61,7 +61,7 @@
 
 
     <div class="input-group">
-        <input type="text" id="search-field" class="form-control" placeholder="Search for material, designer, object type..." value="chair"/>
+        <input type="text" id="search-field" class="form-control" placeholder="Search for material, designer, object type..." value="chair" name="q" />
         <label for="search-field" class="sr-only">Search the collection</label>
 
         <span class="input-group-btn">
@@ -135,19 +135,27 @@
             <div role="tabpanel" class="tab-pane" id="advanced-search" class="advanced-search">
                 <div class='advanced-search'>
 
-    <label><input type="checkbox" value="only-images"
-        autocomplete="off" id="only-images">Include only objects wtih images</label>
+    <label><input type="checkbox" value="only-images" autocomplete="off"
+         id="only-images" >Include only objects wtih images</label>
 
     <div class='search-fields'>
         <h3>Search Fields</h3>
-        <label><input type="radio" name="search-fields" value="all" checked='checked'/>All</label>
-        <label><input type="radio" name="search-fields" value="catalog-nuumber"/>Catalog Number</label>
-        <label><input type="radio" name="search-fields" value="designer"/>Designer</label>
-        <label><input type="radio" name="search-fields" value="object-title"/>Object Name/Title</label>
-        <label><input type="radio" name="search-fields" value="date"/>Date Made</label>
-        <label><input type="radio" name="search-fields" value="place"/>Place Made</label>
-        <label><input type="radio" name="search-fields" value="medium"/>Medium</label>
-        <label><input type="radio" name="search-fields" value="credit-line"/>Credit Line/Donor</label>
+        <label><input type="radio" name="search-fields" value="all"
+            checked/>All</label>
+        <label><input type="radio" name="search-fields" value="catalog-number"
+            />Catalog Number</label>
+        <label><input type="radio" name="search-fields" value="designer"
+            />Designer</label>
+        <label><input type="radio" name="search-fields" value="object-title"
+            />Object Name/Title</label>
+        <label><input type="radio" name="search-fields" value="date"
+            //>Date Made</label>
+        <label><input type="radio" name="search-fields" value="place"
+            //>Place Made</label>
+        <label><input type="radio" name="search-fields" value="medium"
+            />Medium</label>
+        <label><input type="radio" name="search-fields" value="credit-line"
+            //>Credit Line/Donor</label>
     </div>
 
 </div>
