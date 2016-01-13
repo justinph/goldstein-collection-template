@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="exhibition-label">{{exhibition.label}}</div>
+        {{#if exhibition.title}}<h1>{{exhibition.title}}</h1>{{/if}}
+    </div>
+</div>
+
+<div class="row">
+    {{#if exhibition.image}}
+    <div class="col-md-6 col-md-push-6">
+        <h2 class="sr-only">Exhibition image</h2>
+
+        <a href="{{exhibition.images.full-url}}" id='exhibition-image-link'><img src="{{exhibition.image.med-url}}" alt="" class="img-responsive"/></a>
+    </div>
+    {{/if}}
+
+    {{#if exhibition.description}}
+    <div class="col-md-6 col-md-pull-6">
+        <p>{{exhibition.description}}</p>
+
+        {{#if exhibition.related-links}}
+            <div class="related-links">
+                <h2>Related links</h2>
+                <ul class="related-links-list">
+                {{#each exhibition.related-links}}
+                    <li><a href="{{url}}">{{title}}</a></li>
+                {{/each}}
+                </ul>
+            </div>
+        {{/if}}
+
+    </div>
+    {{/if}}
+</div>
+

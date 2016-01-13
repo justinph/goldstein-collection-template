@@ -5,8 +5,14 @@
     var $object_detail = $('.object-detail');
     var $oDLink = $('#object-detail-image-link');
     var $oDImg = $('#object-detail-image-link img');
-
+    var $advSearchLink = $('#advanced-search-link');
     var $home = $('.home');
+
+    function toggleAdvanceSearch (){
+        $('.advanced-search-wrap').removeClass('hidden');
+        $advSearchLink.replaceWith('<h3>' + $advSearchLink.text() + '</h3>');
+    }
+
 
     //object detail page
     if ($object_detail.length > 0){
@@ -28,17 +34,14 @@
     }
 
     //advanced search clicking
-    $('#advanced-search-link').click(function (e){
-        var $this = $(this);
+    $advSearchLink.click(function (e){
         e.preventDefault();
-        $('.advanced-search-wrap').removeClass('hidden');
-        $this.replaceWith('<h3>' + $this.text() + '</h3>');
+        toggleAdvanceSearch();
     });
 
-
-    //search results
-
-
-
+    //open advanced search if there is anything out of the default in it
+    if ($('#only-images').prop('checked') ||  $('input:radio[name=search-fields]:checked').val() !== 'all'){
+        toggleAdvanceSearch();
+    }
 
 })();

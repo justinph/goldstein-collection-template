@@ -1,18 +1,26 @@
 <div class='advanced-search'>
 
-    <label><input type="checkbox" value="only-images"
-        autocomplete="off" id="only-images">Include only objects wtih images</label>
+    <label><input type="checkbox" value="only-images" autocomplete="off"
+         id="only-images" {{#if results.query.only-images}}checked{{/if}}>Include only objects wtih images</label>
 
     <div class='search-fields'>
         <h3>Search Fields</h3>
-        <label><input type="radio" name="search-fields" value="all" checked='checked'/>All</label>
-        <label><input type="radio" name="search-fields" value="catalog-nuumber"/>Catalog Number</label>
-        <label><input type="radio" name="search-fields" value="designer"/>Designer</label>
-        <label><input type="radio" name="search-fields" value="object-title"/>Object Name/Title</label>
-        <label><input type="radio" name="search-fields" value="date"/>Date Made</label>
-        <label><input type="radio" name="search-fields" value="place"/>Place Made</label>
-        <label><input type="radio" name="search-fields" value="medium"/>Medium</label>
-        <label><input type="radio" name="search-fields" value="credit-line"/>Credit Line/Donor</label>
+        <label><input type="radio" name="search-fields" value="all"
+            {{#if results.query.search-fields.all}}checked{{/if}}/>All</label>
+        <label><input type="radio" name="search-fields" value="catalog-number"
+            {{#if results.query.search-fields.catalog-number}}checked{{/if}}/>Catalog Number</label>
+        <label><input type="radio" name="search-fields" value="designer"
+            {{#if results.query.search-fields.designer}}checked{{/if}}/>Designer</label>
+        <label><input type="radio" name="search-fields" value="object-title"
+            {{#if results.query.search-fields.object-title}}checked{{/if}}/>Object Name/Title</label>
+        <label><input type="radio" name="search-fields" value="date"
+            {{#if results.query.search-fields.date}}checked{{/if}}//>Date Made</label>
+        <label><input type="radio" name="search-fields" value="place"
+            {{#if results.query.search-fields.place}}checked{{/if}}//>Place Made</label>
+        <label><input type="radio" name="search-fields" value="medium"
+            {{#if results.query.search-fields.medium}}checked{{/if}}/>Medium</label>
+        <label><input type="radio" name="search-fields" value="credit-line"
+            {{#if results.query.search-fields.credit-line}}checked{{/if}}//>Credit Line/Donor</label>
     </div>
 
 </div>

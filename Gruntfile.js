@@ -87,6 +87,7 @@ module.exports = function (grunt) {
       js: {
         files: [
           'Gruntfile.js',
+          'js/*.js'
         ]//,
         //tasks: 'jshint'
       },
