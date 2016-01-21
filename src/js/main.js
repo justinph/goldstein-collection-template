@@ -2,11 +2,16 @@
 
 (function (){
 
+    // cache selectors we're going to call more than once
     var $object_detail = $('.object-detail');
     var $oDLink = $('#object-detail-image-link');
     var $oDImg = $('#object-detail-image-link img');
-    var $advSearchLink = $('#advanced-search-link');
     var $home = $('.home');
+    var $advSearchLink = $('#advanced-search-link');
+    var $advSearchInputs = {
+        onlyImages: $('#only-images'),
+        searchFields: $('input:radio[name=search-fields]:checked')
+    };
 
     function toggleAdvanceSearch (){
         $('.advanced-search-wrap').removeClass('hidden');
@@ -40,8 +45,24 @@
     });
 
     //open advanced search if there is anything out of the default in it
-    if ($('#only-images').prop('checked') ||  $('input:radio[name=search-fields]:checked').val() !== 'all'){
+    if ($advSearchInputs.onlyImages.prop('checked') ||  $advSearchInputs.searchFields.val() !== 'all'){
         toggleAdvanceSearch();
     }
+
+    //make search form do something with our input fields
+    $('#search-panel-submit').click(function (e){
+        var $form = $(this).parents('form');
+        var query = {
+            q:                  $('#search-field').val(),
+            'search-fields':    $($advSearchInputs.searchFields.selector).val(),
+            'only-images':      $advSearchInputs.onlyImages.prop('checked')
+        };
+
+        e.preventDefault();
+
+        console.log('Submit to:', $form.prop('action'));
+        console.log('Query:', query);
+    });
+
 
 })();
