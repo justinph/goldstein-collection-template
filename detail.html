@@ -41,30 +41,37 @@
 
             
 <div class="site-header">
-    <h2 class='site-title'><a href="../">Collections</a></h2>
-    <h2 class='site-unit'><a href="http://goldstein.design.umn.edu/">Goldstein Museum of Design</a></h2>
-    <h2 class='site-metaunit'><a href="http://design.umn.edu/">College of Design</a></h2>
+    <h2>
+        <span class='heading-2 site-title'><a href="../">Collections</a></span>
+        <span class="sep">-</span>
+        <span class='heading-2  site-unit'><a href="http://goldstein.design.umn.edu/">Goldstein Museum of Design</a></span>
+        <span class="sep">-</span>
+        <span class='heading-2 site-metaunit'><a href="http://design.umn.edu/">College of Design</a></span>
+    </h2>
 </div>
 
 
 
             
 
-<div class="search-panel">
+<section class="search-panel">
 
+    <h2 class="sr-only">Search the collection</h2>
 
+    <form action="/search-url" id="search-form">
     <div class="input-group">
         <input type="text" id="search-field" class="form-control" placeholder="Search for material, designer, object type..." value="chair" name="q" />
         <label for="search-field" class="sr-only">Search the collection</label>
 
         <span class="input-group-btn">
-            <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span><span class="hidden-xs search-button-text" aria-hidden="false"> Search</span></button>
+            <button class="btn btn-primary" type="submit" id="search-panel-submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span><span class="hidden-xs search-button-text" aria-hidden="false"> Search</span></button>
         </span>
     </div>
     
     
+    </form>
 
-</div>
+</section>
 
 
 

@@ -7538,11 +7538,15 @@ h3 {
   clear: both;
 }
 .site-header h2 {
+  margin: 0;
+}
+.site-header .heading-2 {
+  display: block;
   margin: 0 0 0.7rem;
   text-transform: uppercase;
   font-size: 20px;
 }
-.site-header h2 a {
+.site-header .heading-2 a {
   cursor: pointer;
   width: 100%;
   height: 100%;
@@ -7568,12 +7572,15 @@ h3 {
 .site-header .site-metaunit {
   display: none;
 }
+.site-header .sep {
+  display: none;
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .site-header {
     padding: 1.75rem 0 0.5rem;
   }
-  .site-header h2 {
+  .site-header .heading-2 {
     margin-top: 0rem;
     display: inline-block;
     float: left;
@@ -7593,11 +7600,18 @@ h3 {
     position: relative;
     left: -12px;
   }
+  .site-header .site-unit,
+  .site-header .site-metaunit {
+    font-size: 0;
+  }
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .site-header h2 {
+  .site-header .heading-2 {
     font-size: 22px;
+  }
+  .site-header .site-unit {
+    font-size: 0;
   }
   .site-header .site-metaunit {
     font: 0/0 a;
@@ -7625,16 +7639,18 @@ h3 {
 }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .site-header h2 {
+  .site-header .heading-2 {
     font-size: 26px;
   }
   .site-header .site-unit {
+    font-size: 0;
     max-width: 465px;
   }
   .site-header .site-unit:before {
     height: 22px;
   }
   .site-header .site-metaunit {
+    font-size: 0;
     height: 19px;
   }
   .site-header .site-metaunit:before {
@@ -7997,6 +8013,12 @@ h3 {
 }
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
+.search-results .results-page-count {
+  font-weight: normal;
+  display: inline;
+  font-size: 14px;
+  margin: 0;
+}
 .search-results .print-results {
   float: right;
   text-decoration: none;
@@ -8030,6 +8052,9 @@ h3 {
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .search-results .results-page-count {
+    font-size: 18px;
+  }
   .search-results .print-results .print-label {
     display: inline;
     text-transform: uppercase;

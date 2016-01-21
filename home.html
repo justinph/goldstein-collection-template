@@ -41,9 +41,13 @@
 
             
 <div class="site-header">
-    <h2 class='site-title'><a href="../">Collections</a></h2>
-    <h2 class='site-unit'><a href="http://goldstein.design.umn.edu/">Goldstein Museum of Design</a></h2>
-    <h2 class='site-metaunit'><a href="http://design.umn.edu/">College of Design</a></h2>
+    <h2>
+        <span class='heading-2 site-title'><a href="../">Collections</a></span>
+        <span class="sep">-</span>
+        <span class='heading-2  site-unit'><a href="http://goldstein.design.umn.edu/">Goldstein Museum of Design</a></span>
+        <span class="sep">-</span>
+        <span class='heading-2 site-metaunit'><a href="http://design.umn.edu/">College of Design</a></span>
+    </h2>
 </div>
 
 
@@ -52,26 +56,29 @@
 
 
 
-    <h2 class="collection-stats">Search <span class="in-catalog">17,911</span> of the <span class="in-collection">37,123</span> objects in our collection.</h2>
+    <div class="collection-stats h2">Search <span class="in-catalog">17,911</span> of the <span class="in-collection">37,123</span> objects in our collection.</div>
 
 
 
 
-<div class="search-panel">
+<section class="search-panel">
 
+    <h2 class="sr-only">Search the collection</h2>
 
+    <form action="/search-url" id="search-form">
     <div class="input-group">
         <input type="text" id="search-field" class="form-control" placeholder="Search for material, designer, object type..." value="chair" name="q" />
         <label for="search-field" class="sr-only">Search the collection</label>
 
         <span class="input-group-btn">
-            <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span><span class="hidden-xs search-button-text" aria-hidden="false"> Search</span></button>
+            <button class="btn btn-primary" type="submit" id="search-panel-submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span><span class="hidden-xs search-button-text" aria-hidden="false"> Search</span></button>
         </span>
     </div>
     
     
+    </form>
 
-</div>
+</section>
 
 
 <div class="home">
@@ -149,13 +156,13 @@
         <label><input type="radio" name="search-fields" value="object-title"
             />Object Name/Title</label>
         <label><input type="radio" name="search-fields" value="date"
-            //>Date Made</label>
+            />Date Made</label>
         <label><input type="radio" name="search-fields" value="place"
-            //>Place Made</label>
+            />Place Made</label>
         <label><input type="radio" name="search-fields" value="medium"
             />Medium</label>
         <label><input type="radio" name="search-fields" value="credit-line"
-            //>Credit Line/Donor</label>
+            />Credit Line/Donor</label>
     </div>
 
 </div>
@@ -167,7 +174,7 @@
 
 
     <div class="row home-objects">
-    <div class="col-md-5 col-md-offset-1 object-of-week">
+    <section class="col-md-5 col-md-offset-1 object-of-week">
         
             <h2>Object of the Week</h2>
 
@@ -181,9 +188,9 @@
             </a>
 
         
-    </div>
+    </section>
 
-    <div class="col-md-5 featured-objects">
+    <section class="col-md-5 featured-objects">
         
         <h2>Featured Objects</h2>
 
@@ -253,7 +260,7 @@
 
         
 
-    </div>
+    </section>
 </div>
 
 
