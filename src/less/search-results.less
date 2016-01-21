@@ -1,4 +1,12 @@
 .search-results {
+
+    .results-page-count{
+        font-weight: normal;
+        display: inline;
+        font-size: @font-size-base;
+        margin: 0;
+    }
+
     .print-results {
         float: right;
         text-decoration: none;
@@ -51,6 +59,11 @@
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {
     .search-results {
+
+        .results-page-count{
+            font-size: 18px;
+        }
+
         .print-results {
             .print-label {
                 display: inline;

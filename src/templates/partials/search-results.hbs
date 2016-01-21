@@ -1,16 +1,15 @@
 
 <div class="row">
-    <div class="col-md-12">
+    <section class="col-md-12">
         <header class="search-results-meta">
-
         {{#unless results.object-count}}
-            <div class="alert alert-warning" role="alert">No results for <i>{{{results.query}}}</i></div>
+            <h2 class="alert alert-warning" role="alert">No results for <i>{{{results.query.q}}}</i></h2>
         {{else}}
             {{#if results.pagination}}
-                Page {{results.current-page}} of
+                <h2 class='results-page-count'>Page {{results.current-page}} of
             {{/if}}
 
-            {{results.object-count}} results
+            {{results.object-count}} results <span class='sr-only'>for <i>{{{results.query.q}}}</i></span></h2>
         {{/unless}}
 
             {{#if results.print-url}}
@@ -63,5 +62,5 @@
 
         {{/if}}
 
-    </div>
+    </section>
 </div>
