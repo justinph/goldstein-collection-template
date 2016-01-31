@@ -8,13 +8,14 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-handlebars');
 
 
   // Project configuration.
   grunt.initConfig({
 
     clean: {
-      main: ['dist/*']
+      main: ['dist/*','!dist/example/index.html']
     },
 
     less: {
@@ -45,9 +46,17 @@ module.exports = function (grunt) {
         src: 'src/js/main.js',
         dest: 'dist/assets/js/main.js'
       },
+      renderer_js: {
+        src: 'src/js/renderer.js',
+        dest: 'dist/assets/js/renderer.js'
+      },
       jquery: {
         src: 'node_modules/jquery/dist/jquery.min.js',
         dest: 'dist/assets/js/jquery.min.js'
+      },
+      handlebars: {
+        src: 'node_modules/handlebars/dist/handlebars.min.js',
+        dest: 'dist/assets/js/handlebars.min.js'
       },
       bootstrap_js: {
         src: 'node_modules/bootstrap/dist/js/bootstrap.min.js',
@@ -76,6 +85,19 @@ module.exports = function (grunt) {
         src: 'src/templates/*.hbs',
         dest: 'dist/',
         data: 'src/data/*.json',
+      }
+    },
+
+    handlebars: {
+      compile: {
+        options: {
+          namespace: 'JST'
+        },
+        files: {
+          'dist/assets/js/partials.js' : ['src/templates/partials/*.hbs']
+          //'path/to/result.js': 'path/to/source.hbs',
+          //'path/to/another.js": ["path/to/sources/*.hbs", "path/to/more/*.hbs"]
+        }
       }
     },
 
@@ -113,5 +135,5 @@ module.exports = function (grunt) {
   });
 
   // Default tasks to be run.
-  grunt.registerTask('default', ['clean', 'copy', 'less', 'assemble']);
+  grunt.registerTask('default', ['clean', 'copy', 'less', 'assemble', 'handlebars']);
 };
