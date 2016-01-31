@@ -22,6 +22,7 @@
     "jquery": "^2.1.4"
   },
   "devDependencies": {
+    "assemble-yaml": "^0.2.1",
     "grunt-contrib-handlebars": "^0.11.0",
     "grunt-contrib-watch": "^0.6.1",
     "handlebars-helper-add-commas": "0.0.2"

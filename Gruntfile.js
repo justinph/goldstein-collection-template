@@ -1,5 +1,7 @@
 'use strict';
 
+var yfm = require('assemble-yaml');
+
 module.exports = function (grunt) {
 
   // Load npm plugins to provide necessary tasks.
@@ -91,12 +93,15 @@ module.exports = function (grunt) {
     handlebars: {
       compile: {
         options: {
-          namespace: 'JST'
+          // not used, but potentially useful to strip out front matter
+          // processContent: function(content, filepath) {
+          //   return yfm.strip(content, {fromFile: false});
+          // },
+          partialRegex: /.*/,
+          partialsPathRegex: /\/partials\//
         },
         files: {
           'dist/assets/js/partials.js' : ['src/templates/partials/*.hbs']
-          //'path/to/result.js': 'path/to/source.hbs',
-          //'path/to/another.js": ["path/to/sources/*.hbs", "path/to/more/*.hbs"]
         }
       }
     },
