@@ -14,6 +14,8 @@ You can view the site in action here: http://fiddlyio.com/goldstein-collection-t
 
 View here: http://fiddlyio.com/goldstein-collection-template/handlebars.html
 
+Or look in source here at `handlebars.html`.
+
 This example demonstrates how the files in the parent project can be used to dynamically render the collection app on the client. If you look at the file "handlebars.html" in this project, you'll see two groups of comments in the source that show what coding is done to make this work.
 
 This example uses [Handlebars](http://handlebarsjs.com/) to render on the client. Handlebars gives us more control and is less cumbersome to use than finding and replacing directly in the DOM, and allows us to not do heavy work on the server. In general, with handlebars, you write templates that get compiled from the tempalte syntax into javascript functions. Then you pass data (just structured javascript objects to the tempaltes, which return HTML. You then inject the HTML into the page.
