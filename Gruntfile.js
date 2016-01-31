@@ -17,7 +17,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     clean: {
-      main: ['dist/*','!dist/example/**', '!dist/handlebars.html']
+      main: ['dist/*','!dist/example/**', '!dist/handlebars.html', '!dist/README.md']
     },
 
     less: {
