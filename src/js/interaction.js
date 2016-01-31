@@ -1,6 +1,10 @@
 'use strict';
 
-(function (){
+//set namespace if it doesn't exist
+this["GOLDSTEIN"] = this["GOLDSTEIN"] || {};
+
+//function to set up our interaction
+GOLDSTEIN.interaction = function (){
 
     // cache selectors we're going to call more than once
     var $object_detail = $('.object-detail');
@@ -65,4 +69,7 @@
     });
 
 
-})();
+};
+
+//do our interaction
+GOLDSTEIN.interaction();

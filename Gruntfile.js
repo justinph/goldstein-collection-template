@@ -17,7 +17,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     clean: {
-      main: ['dist/*','!dist/example/index.html']
+      main: ['dist/*','!dist/example/**', '!dist/handlebars.html']
     },
 
     less: {
@@ -44,13 +44,9 @@ module.exports = function (grunt) {
         dest: 'dist/assets',
         expand: true
       },
-      main_js: {
-        src: 'src/js/main.js',
-        dest: 'dist/assets/js/main.js'
-      },
-      renderer_js: {
-        src: 'src/js/renderer.js',
-        dest: 'dist/assets/js/renderer.js'
+      interaction_js: {
+        src: 'src/js/interaction.js',
+        dest: 'dist/assets/js/interaction.js'
       },
       jquery: {
         src: 'node_modules/jquery/dist/jquery.min.js',
@@ -93,15 +89,25 @@ module.exports = function (grunt) {
     handlebars: {
       compile: {
         options: {
-          // not used, but potentially useful to strip out front matter
-          // processContent: function(content, filepath) {
-          //   return yfm.strip(content, {fromFile: false});
-          // },
+          namespace: 'GOLDSTEIN.templates',
+
+          //remove yfm from tempaltes, removing assemble stuff
+          processContent: function (content, filepath) {
+            return yfm.strip(content, {fromFile: false});
+          },
           partialRegex: /.*/,
-          partialsPathRegex: /\/partials\//
+          partialsPathRegex: /\/partials\//,
+
+          //turn /src/templates/something.hbs into something
+          processName: function (filePath) {
+             return filePath.replace(/^src\/templates\//, '').replace(/\.hbs$/, '');
+          }
         },
         files: {
-          'dist/assets/js/partials.js' : ['src/templates/partials/*.hbs']
+          'dist/assets/js/templates.js' : [
+            'src/templates/**/*.hbs',
+            '!src/templates/layouts/*.hbs' //skip assemble layouts
+          ]
         }
       }
     },
