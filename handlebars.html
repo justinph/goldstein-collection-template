@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title> Collections | Goldstein Museum of Design</title>
+        <title>Handlebars Example</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="assets/css/main.css" />
@@ -40,7 +40,7 @@
         <main role="main">
             <div class="container-fluid">
 
-            
+
 <div class="site-header">
     <h2>
         <span class='heading-2 site-title'><a href="../">Collections</a></span>
@@ -51,16 +51,16 @@
     </h2>
 </div>
 
+<!-- =========================================================================
+STEP 1:
+Insert this div where our rendered HTML goes
+This is where we'll use handlebars to inject the rendered html into the DOM
+========================================================================== -->
+<div id='rendered-content'></div>
 
 
-            
 
-<ul>
-    <li><a href="home.html">Home</a></li>
-    <li><a href="detail.html">Detail</a></li>
-    <li><a href="search.html">Search</a></li>
-    <li><a href="exhibition.html">Exhibition</a></li>
-</ul>
+
 
             </div>
 
@@ -100,9 +100,38 @@
         </footer>
         <!-- END UofM FOOTER -->
 
+<!-- =========================================================================
+STEP 2:
+These next three script blocks are what do the render.
+1. handlebars.min.js is the template library that does the template rendering logic
+2. templates.js is the pre-compiled version of all our templates. A task in the Gruntfile
+turns our templates into javascript objects/functions that can be called.
+ ========================================================================= -->
+        <script src="assets/js/handlebars.min.js" type="text/javascript"></script>
+        <script src="assets/js/templates.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            //retrieve data with jquery that we're going to inject into the template
+            $.getJSON( 'example/home.json', function (data) {
+                //we want it wrapped up in a nice object
+                var context = {
+                    'home': data
+                };
+                //render
+                var html    = GOLDSTEIN.templates.home(context);
+
+                // inject into page with jquery
+                $('#rendered-content').html(html);
+
+                //now that we've rendered the template, we need to bind our events on the client
+                GOLDSTEIN.interaction();
+            });
+        </script>
+
         <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="assets/js/bootstrap-tabcollapse.js" type="text/javascript"></script>
         <script src="assets/js/interaction.js" type="text/javascript"></script>
+
+
 
     </body>
 </html>
