@@ -11,6 +11,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
 
   // Project configuration.
@@ -112,6 +113,33 @@ module.exports = function (grunt) {
       }
     },
 
+    concat: {
+        options: {
+          separator: ';',
+          stripBanners: true,
+        },
+        top: {
+            src: [
+              'dist/assets/js/umnhf-2015.js',
+              'dist/assets/js/html5shiv-printshiv.js',
+              'dist/assets/js/jquery.min.js',
+              'dist/assets/js/handlebars.min.js',
+              'dist/assets/js/templates.js',
+              'src/js/helpers.is.js'
+            ],
+            dest: 'dist/assets/js/libs.top.js',
+        },
+        bottom: {
+            src: [
+              'dist/assets/js/bootstrap.min.js',
+              'dist/assets/js/bootstrap-tabcollapse.js',
+              'dist/assets/js/interaction.js'
+            ],
+            dest: 'dist/assets/js/libs.bottom.js',
+        },
+
+    },
+
     watch: {
       less: {
         files: ['src/less/**/*.less'],
@@ -146,5 +174,5 @@ module.exports = function (grunt) {
   });
 
   // Default tasks to be run.
-  grunt.registerTask('default', ['clean', 'copy', 'less', 'assemble', 'handlebars']);
+  grunt.registerTask('default', ['clean', 'copy', 'less', 'assemble', 'handlebars', 'concat']);
 };

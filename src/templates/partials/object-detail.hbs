@@ -27,8 +27,8 @@
         <h2 class="sr-only">Object Information</h2>
         <dl>
         {{#each object-detail.information}}
-          <dt>{{@key}}</dt>
-          <dd>{{this}}</dd>
+          <dt{{#is @key 'label text'}} class="label-text-label"{{/is}}>{{@key}}</dt>
+          <dd{{#is @key 'label text'}} class="label-text-text"{{/is}}>{{this}}</dd>
         {{/each}}
         </dl>
     </div>
