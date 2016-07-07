@@ -27,6 +27,16 @@ h2, h3{
     }
 }
 
+#rendered-content {
+    min-height: 100px;
+
+    &.loading {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: data-uri('../assets/img/loading.gif');
+    }
+
+}
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {
