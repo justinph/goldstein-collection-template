@@ -7,9 +7,7 @@
         <link rel="stylesheet" href="assets/css/main.css" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <!--    Script below controls dropdown toggle and footer accordion. -->
-        <script src="assets/js/umnhf-2015.js" type="text/javascript"></script>
-        <script src="assets/js/html5shiv-printshiv.js" type="text/javascript"></script>
-        <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+        <script src="assets/js/libs.top.js" type="text/javascript"></script>
     </head>
     <body>
         <!-- BEGIN HEADER -->
@@ -103,12 +101,7 @@ This is where we'll use handlebars to inject the rendered html into the DOM
 <!-- =========================================================================
 STEP 2:
 These next three script blocks are what do the render.
-1. handlebars.min.js is the template library that does the template rendering logic
-2. templates.js is the pre-compiled version of all our templates. A task in the Gruntfile
-turns our templates into javascript objects/functions that can be called.
  ========================================================================= -->
-        <script src="assets/js/handlebars.min.js" type="text/javascript"></script>
-        <script src="assets/js/templates.js" type="text/javascript"></script>
         <script type="text/javascript">
             //retrieve data with jquery that we're going to inject into the template
             $.getJSON( 'example/home.json', function (data) {
@@ -127,11 +120,7 @@ turns our templates into javascript objects/functions that can be called.
             });
         </script>
 
-        <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="assets/js/bootstrap-tabcollapse.js" type="text/javascript"></script>
-        <script src="assets/js/interaction.js" type="text/javascript"></script>
-
-
+        <script src="assets/js/libs.bottom.js" type="text/javascript"></script>
 
     </body>
 </html>

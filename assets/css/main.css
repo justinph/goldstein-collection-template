@@ -8002,8 +8002,8 @@ h3 {
     width: 70%;
     float: left;
   }
-  .object-detail dt:last-of-type,
-  .object-detail dd:last-of-type {
+  .object-detail .label-text-label,
+  .object-detail .label-text-text {
     float: none;
     width: 100%;
   }
