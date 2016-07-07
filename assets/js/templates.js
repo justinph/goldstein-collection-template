@@ -433,9 +433,7 @@ this["GOLDSTEIN"]["templates"]["detail"] = Handlebars.template({"compiler":[7,">
 
   return "\n\n"
     + ((stack1 = container.invokePartial(partials["search-panel"],depth0,{"name":"search-panel","data":data,"helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
-    + "\n\n<div class='object-detail'>\n\n"
-    + ((stack1 = container.invokePartial(partials["object-detail"],depth0,{"name":"object-detail","data":data,"indent":"    ","helpers":helpers,"partials":partials,"decorators":container.decorators})) != null ? stack1 : "")
-    + "\n</div><!-- end object-detail -->\n";
+    + "\n\n<div class='object-detail' class='loading'>\n\n\n</div><!-- end object-detail -->\n";
 },"usePartial":true,"useData":true});
 
 this["GOLDSTEIN"]["templates"]["exhibition"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
