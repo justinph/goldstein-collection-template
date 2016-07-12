@@ -57,17 +57,22 @@ GOLDSTEIN.interaction = function (){
     $('#search-panel-submit').click(function (e){
         var $form = $(this).parents('form');
         var query = {
-            q:                  $('#search-field').val(),
-            'search-fields':    $($advSearchInputs.searchFields.selector).val(),
-            'only-images':      $advSearchInputs.onlyImages.prop('checked')
+            pS:                 $('#search-field').val(),
+            sletter:            '',
+            db:                 'objects',
+            dir:                'GOLDSTEIN',
+
         };
+
+        // if we were doing an advanced search
+        //'search-fields':    $($advSearchInputs.searchFields.selector).val(),
+        //'only-images':      $advSearchInputs.onlyImages.prop('checked')
 
         e.preventDefault();
 
-        console.log('Submit to:', $form.prop('action'));
-        console.log('Query:', query);
-    });
+        window.location = 'JResults.aspx' + '?' + $.param(query);
 
+    });
 
 };
 
