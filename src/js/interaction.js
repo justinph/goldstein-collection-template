@@ -17,6 +17,16 @@ GOLDSTEIN.interaction = function (){
         searchFields: $('input:radio[name=search-fields]:checked')
     };
 
+    var queryMap = {
+        'catalog-number':   'N',
+        'designer':         'a',
+        'object-title':     'O',
+        'date':             'd',
+        'place':            'P',
+        'medium':           'm',
+        'credit-line':      'Q',
+    };
+
     function toggleAdvanceSearch (){
         $('.advanced-search-wrap').removeClass('hidden');
         $advSearchLink.replaceWith('<h3>' + $advSearchLink.text() + '</h3>');
@@ -63,10 +73,18 @@ GOLDSTEIN.interaction = function (){
             dir:                'GOLDSTEIN',
 
         };
+        var advSearchParam = $($advSearchInputs.searchFields.selector).val();
+        var onlyImages = $advSearchInputs.onlyImages.prop('checked');
 
-        // if we were doing an advanced search
-        //'search-fields':    $($advSearchInputs.searchFields.selector).val(),
-        //'only-images':      $advSearchInputs.onlyImages.prop('checked')
+        // if any of the advanced search radio buttons are checked and match the fields we know about
+        if (advSearchParam && queryMap.hasOwnProperty(advSearchParam)){
+            query.sletter = queryMap[advSearchParam];
+        }
+
+        // only if images is checked
+        if (onlyImages){
+            query.onlyIfImages = true;
+        }
 
         e.preventDefault();
 
