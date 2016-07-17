@@ -92,6 +92,11 @@ GOLDSTEIN.interaction = function (){
 
     });
 
+    // replace broken images with a grey placeholder
+    $('.object-list img, .object-detail img').error(function(){
+        $(this).attr('src', 'assets/img/noimage.png');
+    });
+
 };
 
 //do our interaction
