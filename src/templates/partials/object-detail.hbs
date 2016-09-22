@@ -28,7 +28,7 @@
         <dl>
         {{#each object-detail.information}}
           <dt{{#is @key 'label text'}} class="label-text-label"{{/is}}>{{@key}}</dt>
-          <dd{{#is @key 'label text'}} class="label-text-text"{{/is}}>{{this}}</dd>
+          <dd{{#is @key 'label text'}} class="label-text-text"{{/is}}>{{{this}}}</dd>
         {{/each}}
         </dl>
     </div>
@@ -60,7 +60,7 @@
                 <div class="no-image"></div>
             {{/if}}
             <h3>{{title}}</h3>
-                <small>{{designer}}<br />
+                <small>{{{designer}}}<br />
                 {{[date made]}}</small>
             </a></li>
         {{/each}}

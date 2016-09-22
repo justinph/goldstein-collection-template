@@ -5,7 +5,7 @@ var yfm = require('assemble-yaml');
 module.exports = function (grunt) {
 
   // Load npm plugins to provide necessary tasks.
-  grunt.loadNpmTasks('assemble');
+  grunt.loadNpmTasks('grunt-assemble');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-less');
