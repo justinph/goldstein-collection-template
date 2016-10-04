@@ -6,13 +6,20 @@
 </div>
 
 <div class="row">
-    {{#if exhibition.image}}
-    <div class="col-md-6 col-md-push-6">
-        <h2 class="sr-only">Exhibition image</h2>
+    {{#if exhibition.images}}
+    <div class="col-md-6 col-md-push-6 detail-images">
+        <h2 class="sr-only">Exhibition Images</h2>
 
-        <a href="{{exhibition.image.full-url}}" id='exhibition-image-link'><img src="{{exhibition.image.med-url}}" alt="" class="img-responsive"/></a>
+        <a href="{{exhibition.images.0.full-url}}" id='detail-image-link'><img src="{{exhibition.images.0.med-url}}" alt="" class="img-responsive detail-image"/></a>
+
+        <ul class="detail-images-list">
+        {{#each exhibition.images}}
+            <li><a href="{{full-url}}" data-med-url="{{med-url}}"><img src="{{thumb-url}}" alt="{{title}}" /></a></li>
+        {{/each}}
+        </ul>
     </div>
     {{/if}}
+
 
     {{#if exhibition.description}}
     <div class="col-md-6 col-md-pull-6">

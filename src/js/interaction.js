@@ -7,9 +7,8 @@ this["GOLDSTEIN"] = this["GOLDSTEIN"] || {};
 GOLDSTEIN.interaction = function (){
 
     // cache selectors we're going to call more than once
-    var $object_detail = $('.object-detail');
-    var $oDLink = $('#object-detail-image-link');
-    var $oDImg = $('#object-detail-image-link img');
+    var $oDLink = $('#detail-image-link');
+    var $oDImg = $('#detail-image-link img');
     var $home = $('.home');
     var $advSearchLink = $('#advanced-search-link');
     var $advSearchInputs = {
@@ -32,20 +31,17 @@ GOLDSTEIN.interaction = function (){
         $advSearchLink.replaceWith('<h3>' + $advSearchLink.text() + '</h3>');
     }
 
-
-    //object detail page
-    if ($object_detail.length > 0){
-        //swap images on click/tap
-        $('.object-detail').find('.object-images-list a').click(function (e){
-            var $this = $(this);
-            var medUrl = $this.data('med-url') ? $this.data('med-url') : $this.attr('href');
-            e.preventDefault();
-            $oDLink.attr('href', $this.attr('href'));
-            $oDImg.addClass('loading').one('load', function () {
-                $(this).removeClass('loading');
-            }).attr('src', medUrl);
-        });
-    }
+    //swap images on click/tap
+    $('.detail-images').find('.detail-images-list a').click(function (e){
+        var $this = $(this);
+        var medUrl = $this.data('med-url') ? $this.data('med-url') : $this.attr('href');
+        e.preventDefault();
+        //console.log(e, this);
+        $oDLink.attr('href', $this.attr('href'));
+        $oDImg.addClass('loading').one('load', function () {
+            $(this).removeClass('loading');
+        }).attr('src', medUrl);
+    });
 
     //home page
     if ($home.length > 0){
@@ -93,7 +89,7 @@ GOLDSTEIN.interaction = function (){
     });
 
     // replace broken images with a grey placeholder
-    $('.object-list img, .object-detail img').error(function(){
+    $('.object-list img, .detail-images img').error(function (){
         $(this).attr('src', 'assets/img/noimage.png');
     });
 
