@@ -123,6 +123,7 @@ module.exports = function (grunt) {
               'dist/assets/js/umnhf-2015.js',
               'dist/assets/js/html5shiv-printshiv.js',
               'dist/assets/js/jquery.min.js',
+              'node_modules/d3-dsv/build/d3-dsv.min.js',
               'dist/assets/js/handlebars.min.js',
               'dist/assets/js/templates.js',
               'src/js/helpers.is.js'
