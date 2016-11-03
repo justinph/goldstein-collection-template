@@ -46,6 +46,15 @@ GOLDSTEIN.interaction = function (){
     //home page
     if ($home.length > 0){
         $home.find('.nav-tabs').tabCollapse();
+
+        $('.designer-alpha-list a').click(function(){
+            var $this = $(this);
+            var letter = $this.text();
+            $('.designer-alpha-list a').removeClass('selected');
+            $this.addClass('selected');
+            $('.designer-list').addClass('hidden');
+            $('.designer-list-'+letter).removeClass('hidden');
+        });
     }
 
     //advanced search clicking

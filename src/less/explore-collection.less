@@ -48,6 +48,34 @@
         //background: none;
     }
 
+    .designer-alpha-list {
+
+        text-align: center;
+
+        li {
+            display: inline;
+
+            a,
+            span {
+                font-weight: bold;
+                padding: 5px 5px;
+
+                &.selected {
+                    background-color: @gray-lighter;
+                    color: @link-hover-color;
+                }
+
+            }
+
+        } // end li
+
+    } // end designer-alpha-list
+
+    .designer-list {
+        border-top: 1px solid @gray-lighter;
+        padding: 1em 0;
+    }
+
 }
 
 
@@ -56,12 +84,28 @@
 @media (min-width: @screen-sm-min) {
     .explore-collection{
         border-bottom: 1px solid @gray-lighter;
+
+        .designer-alpha-list {
+            padding-top: 1em;
+        }
+
+        .designer-list {
+            column-count: 3;
+        }
     }
 }
 
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {
+
+    .explore-collection{
+
+        .designer-list {
+            margin: 0 0.4em;
+        }
+
+    }
 
 }
 
