@@ -22,7 +22,7 @@
 
 
     {{#if exhibition.description}}
-    <div class="col-md-6 col-md-pull-6">
+    <div class="col-md-6{{#if exhibition.images}} col-md-pull-6{{/if}}">
         <p>{{exhibition.description}}</p>
 
         {{#if exhibition.related-links}}

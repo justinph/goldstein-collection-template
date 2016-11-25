@@ -23,7 +23,7 @@
     {{/if}}
 
     {{#if object-detail.information}}
-    <div class="col-md-6 col-md-pull-6">
+    <div class="col-md-6{{#if object-detail.images}} col-md-pull-6{{/if}}">
         <h2 class="sr-only">Object Information</h2>
         <dl>
         {{#each object-detail.information}}
