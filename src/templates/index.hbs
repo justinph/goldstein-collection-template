@@ -1,21 +1,7 @@
-
-
 <ul>
     <li><a href="home.html">Home</a></li>
     <li><a href="detail.html">Detail</a></li>
     <li><a href="search.html">Search</a></li>
     <li><a href="exhibition.html">Exhibition</a></li>
+    <li><a href="embed.html">Embed</a></li>
 </ul>
-
-
-{{#if object-detail.information}}
-<div class="col-md-6 col-md-pull-6">
-    <h2 class="sr-only">Object Information</h2>
-    <dl>
-    {{#each object-detail.information}}
-      <dt{{#is @key 'label text'}} class="label-text-label"{{/is}}>{{@key}}</dt>
-      <dd{{#is @key 'label text'}} class="label-text-text"{{/is}}>{{this}}</dd>
-    {{/each}}
-    </dl>
-</div>
-{{/if}}

@@ -1,0 +1,13 @@
+{{#if home.object-of-week}}
+    <h2>Object of the Week</h2>
+
+    <a href="{{home.object-of-week.url}}">
+    {{#if home.object-of-week.med-url}}
+        <img src="{{home.object-of-week.med-url}}" alt="" class="img-responsive"/>
+    {{/if}}
+    <h3>{{home.object-of-week.title}}</h3>
+        <small>{{home.object-of-week.designer}}<br />
+        {{home.object-of-week.[date made]}}</small>
+    </a>
+
+{{/if}}
