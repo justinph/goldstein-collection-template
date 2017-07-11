@@ -138,6 +138,16 @@ module.exports = function (grunt) {
             ],
             dest: 'dist/assets/js/libs.bottom.js',
         },
+        embed: {
+            src: [
+              'dist/assets/js/jquery.min.js',
+              'node_modules/d3-dsv/build/d3-dsv.min.js',
+              'dist/assets/js/handlebars.min.js',
+              'dist/assets/js/templates.js',
+              'src/js/helpers.is.js'
+            ],
+            dest: 'dist/assets/js/libs.embed.js',
+        },
 
     },
 
