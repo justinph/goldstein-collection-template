@@ -28,7 +28,14 @@
         <dl>
         {{#each object-detail.information}}
           <dt{{#is @key 'label text'}} class="label-text-label"{{/is}}>{{@key}}</dt>
-          <dd{{#is @key 'label text'}} class="label-text-text"{{/is}}>{{{this}}}</dd>
+          <dd{{#is @key 'label text'}} class="label-text-text"{{/is}}>
+
+            {{#eachNewLine this}}
+                <p>{{this}}</p>
+
+            {{/eachNewLine}}
+
+          </dd>
         {{/each}}
         </dl>
     </div>
@@ -41,7 +48,7 @@
         <h2>Explore related topics</h2>
         <ul class="related-topics-list">
         {{#each object-detail.related-topics}}
-            <li><a href="{{url}}"><span class="label label-default">{{title}}</span></a></li>
+            <li><a href="{{url}}"><span class="label label-default">{{{title}}}</span></a></li>
         {{/each}}
         </ul>
     </div>

@@ -75,7 +75,7 @@ module.exports = function (grunt) {
         flatten: true,
         assets: 'dist/assets',
         partials: ['src/templates/partials/*.hbs'],
-        helpers: ['handlebars-helper-add-commas'], //'src/templates/helpers/helper-*.js'
+        helpers: 'src/js/helpers.js', //'src/templates/helpers/helper-*.js'
         layoutdir: 'src/templates/layouts',
         layout: 'default.hbs',
         data: 'src/data/*.json',
@@ -89,6 +89,7 @@ module.exports = function (grunt) {
 
     handlebars: {
       compile: {
+        helpers: 'src/js/helpers.js',
         options: {
           namespace: 'GOLDSTEIN.templates',
 
@@ -126,7 +127,7 @@ module.exports = function (grunt) {
               'node_modules/d3-dsv/build/d3-dsv.min.js',
               'dist/assets/js/handlebars.min.js',
               'dist/assets/js/templates.js',
-              'src/js/helpers.is.js'
+              'src/js/helpers.js'
             ],
             dest: 'dist/assets/js/libs.top.js',
         },
@@ -144,7 +145,7 @@ module.exports = function (grunt) {
               'node_modules/d3-dsv/build/d3-dsv.min.js',
               'dist/assets/js/handlebars.min.js',
               'dist/assets/js/templates.js',
-              'src/js/helpers.is.js'
+              'src/js/helpers.js'
             ],
             dest: 'dist/assets/js/libs.embed.js',
         },

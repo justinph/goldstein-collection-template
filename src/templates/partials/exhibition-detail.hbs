@@ -23,7 +23,12 @@
 
     {{#if exhibition.description}}
     <div class="col-md-6{{#if exhibition.images}} col-md-pull-6{{/if}}">
-        <p>{{exhibition.description}}</p>
+
+
+        {{#eachNewLine exhibition.description}}
+            <p>{{this}}</p>
+
+        {{/eachNewLine}}
 
         {{#if exhibition.related-links}}
             <div class="related-links">
