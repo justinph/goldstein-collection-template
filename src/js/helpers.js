@@ -1,4 +1,6 @@
 
+// Adapted from: https://gist.github.com/dhollenbeck/c4cde67aee08a3db06edf34c02ddd543
+
 var Handlebars = (typeof Handlebars === 'undefined') ? require('handlebars') : Handlebars;
 
 var eachNewLine = function (str, options) {
