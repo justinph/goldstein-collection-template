@@ -10,23 +10,23 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "assemble": "^0.16.1",
-    "assemble-core": "^0.25.0",
-    "bootstrap": "^3.3.6",
-    "d3-dsv": "^1.0.3",
-    "grunt": "^1.0.1",
+    "assemble": "0.16.1",
+    "assemble-core": "0.25.0",
+    "bootstrap": "3.3.6",
+    "d3-dsv": "1.0.3",
+    "grunt": "1.0.1",
     "grunt-assemble": "0.5.0",
-    "grunt-contrib-clean": "^0.7.0",
-    "grunt-contrib-concat": "^1.0.0",
-    "grunt-contrib-copy": "^0.8.2",
-    "grunt-contrib-less": "^1.1.0",
-    "handlebars": "^4.0.5",
-    "jquery": "^2.1.4"
+    "grunt-contrib-clean": "0.7.0",
+    "grunt-contrib-concat": "1.0.0",
+    "grunt-contrib-copy": "0.8.2",
+    "grunt-contrib-less": "1.1.0",
+    "handlebars": "4.0.5",
+    "jquery": "2.2.4"
   },
   "devDependencies": {
-    "assemble-yaml": "^0.2.1",
-    "grunt-contrib-handlebars": "^0.11.0",
-    "grunt-contrib-watch": "^0.6.1",
+    "assemble-yaml": "0.2.1",
+    "grunt-contrib-handlebars": "0.11.0",
+    "grunt-contrib-watch": "0.6.1",
     "handlebars-helper-add-commas": "0.0.2"
   }
 }
